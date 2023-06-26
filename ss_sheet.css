@@ -138,7 +138,7 @@ p {
     border-right: none;
 }
 
-button, input {
+button, input, select {
     background-color: var(--ts-background-secondary);
     color: var(--ts-color-primary);
     font-family: 'OptimusPrinceps', sans-serif;
@@ -155,23 +155,23 @@ input:disabled {
     color: var(--ts-color-secondary);
 }
 
-button:hover, input:hover {
+button:hover, input:hover, select:hover {
     background-color: var(--ts-background-primary);
     transition: ease-in-out 0.2s;
 }
 
-button:focus-visible, input:focus-visible {
+button:focus-visible, input:focus-visible, select:focus-visible {
     outline: 3px solid var(--ts-accessibility-focus);
     outline-offset: -1px;
     background-color: var(--ts-background-primary);
     transition: outline-color 0s;
 }
 
-button {
+button, select {
     background-color: var(--ts-button-background);
 }
 
-button:disabled, button:disabled:hover {
+button:disabled, button:disabled:hover, select:disabled, select:disabled:hover {
     background-color: var(--ts-background-tertiary);
     color: var(--ts-color-secondary);
 }

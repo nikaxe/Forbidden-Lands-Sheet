@@ -28,7 +28,9 @@ function initSheet() {
                 titleSibling.classList.add("interactible-title");
                 titleSibling.style.cursor = "pointer";
                 titleSibling.addEventListener("click", function() {
-                    TS.dice.putDiceInTray([createDiceRoll(titleSibling, finalInput)]);
+                    TS.dice.putDiceInTray([createDiceRoll(titleSibling, finalInput)]).catch((noDiceSpecified) => {
+                        TS.debug.log("Number of dice to roll not specified.")
+                    });
                     //we are not checking for success or failure here, but could easily by adding a .then (success) and .catch (failure)
                 });
                 input.setAttribute("aria-labelledby", titleSibling.id);
@@ -101,7 +103,10 @@ function createDiceRoll(clickElement, inputElement) {
     } else {
         label = clickElement.textContent;
     }
-    let roll = `${clickElement.dataset.diceType}${modifierString == '+' ? '' : modifierString}`
+
+    let numDice = inputElement.value > 0 && inputElement.value != "" ? inputElement.value : 0;
+
+    let roll = `${numDice}${clickElement.dataset.diceType}${modifierString == '+' ? '' : modifierString}`
 
     //this returns a roll descriptor object. we could be using TS.dice.makeRollDescriptor(`${roll}+${modifierString}`) instead
     //depends mostly on personal preference. using makeRollDescriptor can be safer through updates, but it's also less efficient

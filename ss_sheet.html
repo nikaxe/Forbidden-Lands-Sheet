@@ -31,36 +31,37 @@
             <label class="field-title">Rep</label><input id="rep" type="number" class="field-data-short"></input><p class="field-desc">Reputation</p>
         </div>
     </div>
+
     <div class="container columns-2">
         <div class="container">
             <h1>Stats</h1>
             <div class="content-row">
-                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Strength">STR</label><input id="str" type="number" class="field-data-short"></input>
+                <label class="field-title" data-dice-type="d6" data-modifier="no-mod" data-label="Strength">STR</label><input id="str" type="number" class="field-data-short"></input>
             </div>
             <div class="content-row">
-                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Intelligence">INT</label><input id="int" type="number" class="field-data-short"></input>
+                <label class="field-title" data-dice-type="d6" data-modifier="no-mod" data-label="Intelligence">INT</label><input id="int" type="number" class="field-data-short"></input>
             </div>
             <div class="content-row">
-                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Dexterity">DEX</label><input id="dex" type="number" class="field-data-short"></input>
+                <label class="field-title" data-dice-type="d6" data-modifier="no-mod" data-label="Dexterity">DEX</label><input id="dex" type="number" class="field-data-short"></input>
             </div>
             <div class="content-row">
-                <label class="field-title" data-dice-type="1d20" data-modifier="no-mod" data-label="Charisma">CHA</label><input id="cha" type="number" class="field-data-short"></input>
+                <label class="field-title" data-dice-type="d6" data-modifier="no-mod" data-label="Charisma">CHA</label><input id="cha" type="number" class="field-data-short"></input>
             </div>
             <label class="field-desc">Values from 1-5</label>
         </div>
         <div class="container">
             <h1>Damage</h1>
             <div class="content-row">
-                <label class="field-title" data-dice-type="1d6" data-modifier="no-mod" data-label="Damage Strength">STR</label><input id="dmg-strength" type="number" class="field-data-short"></input><p class="field-desc"></p>
+                <label class="field-title" data-modifier="no-mod" data-label="Damage Strength">STR</label><input id="dmg-strength" type="number" class="field-data-short"></input><p class="field-desc"></p>
             </div>
             <div class="content-row">
-                <label class="field-title" data-dice-type="1d6" data-modifier="no-mod" data-label="Damage Intelligence">INT</label><input id="dmg-intelligence" type="number" class="field-data-short"></input><p class="field-desc"></p>
+                <label class="field-title" data-modifier="no-mod" data-label="Damage Intelligence">INT</label><input id="dmg-intelligence" type="number" class="field-data-short"></input><p class="field-desc"></p>
             </div>
             <div class="content-row">
-                <label class="field-title" data-dice-type="1d6" data-modifier="no-mod" data-label="Damage Dexterity">DEX</label><input id="dmg-dex" type="number" class="field-data-short"></input><p class="field-desc"></p>
+                <label class="field-title" data-modifier="no-mod" data-label="Damage Dexterity">DEX</label><input id="dmg-dex" type="number" class="field-data-short"></input><p class="field-desc"></p>
             </div>
             <div class="content-row">
-                <label class="field-title" data-dice-type="1d6" data-modifier="no-mod" data-label="Damage Charisma">CHA</label><input id="dmg-charisma" type="number" class="field-data-short"></input><p class="field-desc"></p>
+                <label class="field-title" data-modifier="no-mod" data-label="Damage Charisma">CHA</label><input id="dmg-charisma" type="number" class="field-data-short"></input><p class="field-desc"></p>
             </div>
         </div>
         <div class="container">
@@ -417,6 +418,72 @@
         </div>
     </div>
     
+    <!-- CONSUMABLES -->
+    <div class="container">
+        <div class="content-row">
+            <h1>Consumables</h1>
+        </div>
+        <div class="content-row">
+            <select id="food" type="" class="">
+                <option value="0">0</option>
+                <option value="d6">d6</option>
+                <option value="d8">d8</option>
+                <option value="d10">d10</option>
+                <option value="d12">d12</option>
+            </select>
+            <label class="field-title">Food</label>
+        </div>
+        <div class="content-row">
+            <select id="water" type="" class="">
+                <option value="0">0</option>
+                <option value="d6">d6</option>
+                <option value="d8">d8</option>
+                <option value="d10">d10</option>
+                <option value="d12">d12</option>
+            </select>
+            <label class="field-title">Water</label>
+        </div>
+        <div class="content-row">
+            <select id="arrows" type="" class="">
+                <option value="0">0</option>
+                <option value="d6">d6</option>
+                <option value="d8">d8</option>
+                <option value="d10">d10</option>
+                <option value="d12">d12</option>
+            </select>
+            <label class="field-title">Arrows</label>
+        </div>
+        <div class="content-row">
+            <select id="torches" type="" class="">
+                <option value="0">0</option>
+                <option value="d6">d6</option>
+                <option value="d8">d8</option>
+                <option value="d10">d10</option>
+                <option value="d12">d12</option>
+            </select>
+            <label class="field-title">Torches</label>
+        </div>
+    </div>
+
+    <!-- COINS -->
+    <div class="container">
+        <div class="content-row">
+            <h1>Coins</h1>
+        </div>
+        <div class="content-row">
+            <input id="gold" type="number" class="field-data-short"></input>
+            <lable class="field-title">Gold</lable>
+        </div>
+        <div class="content-row">
+            <input id="silver" type="number" class="field-data-short"></input>
+            <lable class="field-title">Silver</lable>
+        </div>
+        <div class="content-row">
+            <input id="copper" type="number" class="field-data-short"></input>
+            <lable class="field-title">Copper</lable>
+        </div>
+    </div>
+
     <!-- RELATIONS -->
     <div class="container">
         <h1 id="relations-section">Relations</h1>
