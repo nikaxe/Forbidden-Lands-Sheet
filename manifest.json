@@ -1,0 +1,23 @@
+{
+  "manifestVersion": 1,
+  "name": "Forbidden Lands Sheet",
+  "entryPoint": "/ss_sheet.html",
+  "descriptionFilePath": "/readme.md",
+  "api": {
+    "version": "0.1",
+    "initTimeout": 10,
+    "subscriptions": {
+      "symbiote": {
+        "onStateChangeEvent": "onStateChangeEvent"
+      }
+    }
+  },
+  "environment": {
+    "webViewBackgroundColor": "#000000",
+    "extras": [
+      "fonts",
+      "icons",
+      "colorStyles"
+    ]
+  }
+}
