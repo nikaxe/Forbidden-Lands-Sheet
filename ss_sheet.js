@@ -1,7 +1,7 @@
 var clearStorageButton = undefined;
 
 function initSheet() {
-    let inputs = document.querySelectorAll("input,button,textarea");
+    let inputs = document.querySelectorAll("input,button,textarea,select");
     for (let input of inputs) {
         if (input.id != undefined && input.id != "clear-storage") {
             input.addEventListener("change", function() {
@@ -233,10 +233,20 @@ function clearSheet() {
     }
 }
 
+function initNumberInputs () {
+    let inputs = document.querySelectorAll("input");
+    for (let input of inputs) {
+        if(input.classList.contains("field-data-short")){
+            input.value = 0;
+        }
+    }
+}
+
 function onStateChangeEvent(msg) {
     if (msg.kind === "hasInitialized") {
         //the TS Symbiote API has initialized and we can begin the setup. think of this as "init".
         clearStorageButton = document.getElementById("clear-storage");
+        initNumberInputs();
         loadStoredData();
         initSheet();
     }
