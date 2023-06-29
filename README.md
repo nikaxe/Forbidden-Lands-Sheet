@@ -1,3 +1,3 @@
-# ss sheet
+# Forbidden Lands Character Sheet
 
-A sparkling new symbiote!
+A symbiote for a character sheet based on the character sheet example symbiote. 
